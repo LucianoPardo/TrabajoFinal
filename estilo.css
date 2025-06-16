@@ -1,0 +1,63 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.bodyCrearUsuario{
+    background-image: url(fondo1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flex-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  10%;
+    width: 175px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #4c99ac;
+    border-radius: 10px;
+    background-color: #92c3f1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+.formulario{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.titulo2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.cajaFormulario{
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #4c99ac;
+    border-radius: 10px;
+    background-color: #92c3f1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+
+}
+.cajaPrincipal{
+    width: 350px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
