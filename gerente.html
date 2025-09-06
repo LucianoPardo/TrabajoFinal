@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel del Gerente</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Panel del Gerente</h1>
@@ -12,42 +13,89 @@
             <li>
                 <span>Usuarios</span>
                 <ul>
-                    <li><a href="crear_usuario.html">Crear empleado</a></li>
-                    <li><a href="#">Eliminar empleado</a></li>
+                    <button id="btnCrearEmpleado">Crear usuario empleado</button>
+                            <!-- Formulario oculto -->
+                    <div class="cajaFormulario oculto" id="formCrearEmpleado">
+                        <h1 class="titulo2">Crear empleado</h1>
+                        <form class="formulario">
+                            <label for="nombre">Nombre del empleado: </label>
+                            <input type="text" id="nombre" placeholder="Nombre" required>
+
+                            <label for="apellido">Apellido: </label>
+                            <input type="text" id="apellido" placeholder="Apellido" required>
+
+                            <label for="dni">DNI:</label>
+                            <input type="text" id="dni" placeholder="DNI" required>
+
+                            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
+
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+
+                            <label for="telefono">Número telefónico:</label>
+                            <input type="text" id="telefono" placeholder="Número telefónico" required>
+
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" placeholder="Dirección" required>
+
+                            <label for="contraseña">Contraseña:</label>
+                            <input type="password" id="contraseña" placeholder="Contraseña"required>
+
+                            <input type="submit" value="Ingresar">
+                        </form>
+                    </div>
                 </ul>
             </li>
             <li>
                 <span>Menú</span>
                 <ul>
-                    <li><a href="crear_menu.html">Crear plato</a></li>
-                    <li><a href="#">Modificar plato</a></li>
+                    <button id="btnCrearMenu">Crear Menú</button>
+                    <!-- Formulario oculto -->
+                    <div class="cajaFormulario oculto" id="formCrearMenu">
+                        <h1 class="titulo2">Crear Menú</h1>
+                        <form class="formulario">
+                            <label for="imagen">Selecciona una imagen:</label>
+                            <input type="file" id="imagen" accept="image/*">
+
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="nombre" required>
+
+                            <label for="precio">Precio:</label>
+                            <input type="number" id="precio" placeholder="precio" required>
+
+                            <label for="descripcion">descripcion:</label>
+                            <input type="text" id="descripcion" placeholder="descripcion" required>
+
+                            <input type="submit" value="Crear Menú">
+                        </form>
+                    </div>
                 </ul>
             </li>
             <li>
                 <span>Stock</span>
                 <ul>
-                    <li><a href="control_stock.html">Ver stock</a></li>
-                    <li><a href="#">Actualizar stock</a></li>
+                    <a href="control_stock.html"><button>Control de stock</button></a>
                 </ul>
             </li>
             <li>
                 <span>Mapa del Restaurante</span>
                 <ul>
-                    <li><a href="crear_mapa.html">Crear mapa</a></li>
-                    <li><a href="#">Ver mesas</a></li>
+                    <a href="crear_mapa.html"><button>Crear Mapa de restaurante</button></a>
+                    <a href="#"><button>Modificar Mesas</button></a>
                 </ul>
             </li>
             <li>
                 <span>Reportes</span>
                 <ul>
-                    <li><a href="#">Informe de ventas</a></li>
+                    <a href="#"><button>Infrome de Ventas</button></a>
                 </ul>
             </li>
-            <li>
-                <a href="index.html">Cerrar sesión</a>
-            </li>
+            <ul>
+                <a href="index.html"><button>Cerrar sesión</button></a>
+            </ul>
         </ul>
     </nav>
-
+    <script src="dom.js"></script>
 </body>
 </html>

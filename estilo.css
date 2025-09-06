@@ -4,7 +4,6 @@
 }
 
 .bodyCrearUsuario{
-    background-image: url(fondo1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,7 +46,6 @@ input{
 
 .cajaFormulario{
     width: 350px;
-    margin: 50px auto;
     padding: 20px;
     border: 2px solid #4c99ac;
     border-radius: 10px;
@@ -60,4 +58,8 @@ input{
     margin: 50px auto;
     display: flex;
     flex-direction: column;
+}
+
+.oculto{
+    display: none;
 }
