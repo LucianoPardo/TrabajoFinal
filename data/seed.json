@@ -1,6 +1,0 @@
-[
-  { "usuario": "admin", "contraseña": "1234", "rol": "gerente" },
-  { "usuario": "mozo1", "contraseña": "1234", "rol": "mozo" },
-  { "usuario": "cocinero1", "contraseña": "1234", "rol": "cocinero" },
-  { "usuario": "cliente1", "contraseña": "1234", "rol": "cliente" }
-]
