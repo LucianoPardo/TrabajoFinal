@@ -60,6 +60,61 @@ input{
     flex-direction: column;
 }
 
+
+
+.titulo3{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+#formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#formulario input {
+  width: 60px;
+  padding: 5px;
+}
+
+
+#plano {
+  margin: 20px auto;
+  position: relative;
+  background: #f5f5f5;
+  display: none;
+}
+
+
+.mesa {
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: move;
+  border-radius: 8px;
+}
+
+
+#botonMesa {
+  display: none;
+  margin-top: 10px;
+}
+
 .oculto{
     display: none;
 }
+
