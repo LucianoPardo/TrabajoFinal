@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estiloStock.css">
+</head>
+<body>
+    <h1>Control de stock</h1>
+
+    <form id="formProducto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="nombre" required>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" placeholder="precio" required>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" placeholder="descripcion" required>
+
+        <label for="cantidad">Cantidad en stock:</label>
+        <input type="number" id="cantidad" placeholder="cantidad" required>
+
+        <input type="submit" value="Agregar Producto">
+    </form>
+
+    <div class="acciones">
+        <button id="btnMostrar">Mostrar Stock</button>
+    </div>
+
+    <div class="stock" id="stockContainer">
+        <h2>Productos en stock</h2>
+        <div id="listaStock"></div>
+    </div>
+
+    <script src="./scriptStock.js"></script>
+
+</body>
+</html>

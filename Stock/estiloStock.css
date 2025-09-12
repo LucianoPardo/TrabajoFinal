@@ -1,0 +1,62 @@
+/* Centrar formulario */
+#formProducto {
+    width: 300px; /* más compacto */
+    margin: 50px auto; /* centrado horizontal con margen superior */
+    padding: 15px;
+    border: 2px solid #4c99ac;
+    border-radius: 10px;
+    background-color: #92c3f1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* separación entre inputs */
+}
+
+/* Inputs del formulario */
+#formProducto input[type="text"],
+#formProducto input[type="number"],
+#formProducto input[type="file"] {
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* Botón de agregar producto */
+#formProducto input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* más pequeño que antes */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+#formProducto input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Botones de stock (+ / -) más pequeños */
+.btnStock {
+    padding: 4px 8px; /* más compacto */
+    margin: 5px 3px 0 0;
+    font-size: 13px; /* más pequeño */
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btnStock:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de botones dentro de cada producto */
+.botones-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
