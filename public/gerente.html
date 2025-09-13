@@ -75,7 +75,24 @@
             <li>
                 <span>Stock</span>
                 <ul>
-                    <a href="control_stock.html"><button>Control de stock</button></a>
+                    <button id="btnStock">Stock</button>
+                    <div class="cajaFormulario oculto" id="formStock">
+                        <form class="formulario">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" placeholder="nombre" required>
+
+                            <label for="precio">Precio:</label>
+                            <input type="number" id="precio" placeholder="precio" required>
+
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" id="descripcion" placeholder="descripcion" required>
+
+                            <label for="cantidad">Cantidad en stock:</label>
+                            <input type="number" id="cantidad" placeholder="cantidad" required>
+
+                            <input type="submit" value="Agregar Producto">
+                        </form>
+                    </div>
                 </ul>
             </li>
             <li>
@@ -97,5 +114,6 @@
         </ul>
     </nav>
     <script src="dom.js"></script>
+    <script src="scriptStock.js"></script>
 </body>
 </html>

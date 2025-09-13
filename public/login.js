@@ -5,13 +5,13 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const usuario = document.getElementById("usuario").value;
-  const contraseña = document.getElementById("contraseña").value;
+  const contrasenia = document.getElementById("contraseña").value;
 
   try {
     const res = await fetch("/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usuario, contraseña })
+      body: JSON.stringify({ usuario, contrasenia })
     });
 
     const data = await res.json();
