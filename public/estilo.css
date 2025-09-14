@@ -118,3 +118,133 @@ input{
     display: none;
 }
 
+
+/* nuevo */
+
+:root{
+  --header-bg: #0f62fe;
+  --header-color: #ffffff;
+  --row-alt: #f6f8fa;
+  --grid: #c8c8c8;
+  --cell-focus: #ffd54f;
+  --font: 14px/1.3 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body{
+  font: var(--font);
+  margin: 24px;
+  background: #fafafa;
+  color: #111;
+}
+
+.sheet {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(15,22,39,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e6e9ef;
+}
+
+.sheet header{
+  padding: 12px 16px;
+  border-bottom: 1px solid #eceef3;
+  background: linear-gradient(180deg,#fff 0%, #fbfdff 100%);
+}
+
+.sheet header h2{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table-wrap{
+  overflow: auto;
+  max-height: 60vh;
+}
+
+table.excel {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  table-layout: fixed;
+}
+
+/* Encabezado */
+table.excel thead th{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--header-bg);
+  color: var(--header-color);
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+/* Column widths */
+table.excel colgroup col:nth-child(1){ width: 30%; }   /* Nombre */
+table.excel colgroup col:nth-child(2){ width: 12%; }   /* Precio */
+table.excel colgroup col:nth-child(3){ width: 42%; }   /* Descripción */
+table.excel colgroup col:nth-child(4){ width: 16%; }   /* Cantidad */
+
+/* Filas y celdas */
+table.excel tbody tr{
+  border-bottom: 1px solid var(--grid);
+}
+
+table.excel tbody tr:nth-child(even){
+  background: var(--row-alt);
+}
+
+table.excel td{
+  padding: 10px 12px;
+  border-right: 1px solid var(--grid);
+  vertical-align: middle;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Última columna sin borde a la derecha */
+table.excel td:last-child{
+  border-right: none;
+  text-align: center;
+}
+
+/* Inputs contenteditable look */
+td[contenteditable="true"]{
+  cursor: text;
+  outline: none;
+}
+
+td[contenteditable="true"]:focus{
+  background: linear-gradient(90deg, rgba(255,213,79,0.15), rgba(255,241,172,0.06));
+  box-shadow: inset 0 0 0 2px var(--cell-focus);
+}
+
+/* Pequeños estilos para precio y cantidad */
+.precio { font-weight: 600; }
+.cantidad { text-align: center; font-variant-numeric: tabular-nums; }
+
+.sheet footer{
+  padding: 10px 14px;
+  border-top: 1px dashed #eef2f6;
+  font-size: 13px;
+  color: #556;
+  background: #fff;
+}
+
+@media (max-width:720px){
+  :root{ --font: 13px/1.2 "Segoe UI", Roboto, Arial, sans-serif; }
+  table.excel { min-width: 640px; }
+}
+
+
+
+

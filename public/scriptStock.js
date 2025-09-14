@@ -1,46 +1,31 @@
-let productos = [];
+// tabla
 
-document.getElementById("formProducto").addEventListener("submit", function(e) {
-  e.preventDefault();
+const formStock = document.querySelector("#Stock form");
+const tablaBody = document.querySelector("#tablaProductos tbody");
 
+formStock.addEventListener("submit", (e) => {
+  e.preventDefault(); // Evita que la página se recargue
+
+  // Tomar valores de los inputs
   const nombre = document.getElementById("nombre").value;
-  const precio = parseFloat(document.getElementById("precio").value);
+  const precio = document.getElementById("precio").value;
   const descripcion = document.getElementById("descripcion").value;
-  const cantidad = parseInt(document.getElementById("cantidad").value);
+  const cantidad = document.getElementById("cantidad").value;
 
-  const producto = { nombre, precio, descripcion, cantidad };
-  productos.push(producto);
+  // Crear una nueva fila
+  const fila = document.createElement("tr");
 
-  alert("Producto agregado con éxito 🎉");
-  e.target.reset();
+  // Crear celdas y poner los valores
+  fila.innerHTML = `
+    <td>${nombre}</td>
+    <td>${precio}</td>
+    <td>${descripcion}</td>
+    <td>${cantidad}</td>
+  `;
+
+  // Agregar fila a la tabla
+  tablaBody.appendChild(fila);
+
+  // Limpiar formulario
+  formStock.reset();
 });
-
-document.getElementById("btnMostrar").addEventListener("click", function() {
-  const lista = document.getElementById("listaStock");
-  lista.innerHTML = "";
-  if (productos.length === 0) {
-    lista.innerHTML = "<p>No hay productos en stock.</p>";
-    return;
-  }
-
-  productos.forEach((p, index) => {
-    const div = document.createElement("div");
-    div.classList.add("producto");
-    div.innerHTML = `
-      <strong>${p.nombre}</strong><br>
-      Precio: $${p.precio}<br>
-      Descripción: ${p.descripcion}<br>
-      Cantidad: <span id="cantidad-${index}">${p.cantidad}</span>
-      <button class="btnStock" onclick="cambiarStock(${index}, 1)">+</button>
-      <button class="btnStock" onclick="cambiarStock(${index}, -1)">-</button>
-    `;
-    lista.appendChild(div);
-  });
-});
-
-function cambiarStock(index, cambio) {
-  productos[index].cantidad += cambio;
-  if (productos[index].cantidad < 0) productos[index].cantidad = 0;
-
-  document.getElementById(`cantidad-${index}`).innerText = productos[index].cantidad;
-}

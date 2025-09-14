@@ -76,22 +76,39 @@
                 <span>Stock</span>
                 <ul>
                     <button id="btnStock">Stock</button>
-                    <div class="cajaFormulario oculto" id="formStock">
-                        <form class="formulario">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" placeholder="nombre" required>
+                    <div class="tabla oculto" id="seccionStock">
+                        <table id="tablaProductos">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Descripción</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <!-- Vacío al inicio -->
+                            </tbody>
+                        </table>
+                        <button id="btnAñadirProducto">Añadir Producto</button>
+                        <!-- Formulario oculto -->
+                        <div class="cajaFormulario oculto" id="formularioStock">
+                            <form class="formulario">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" placeholder="nombre" required>
 
-                            <label for="precio">Precio:</label>
-                            <input type="number" id="precio" placeholder="precio" required>
+                                <label for="precio">Precio:</label>
+                                <input type="number" id="precio" placeholder="precio" required>
 
-                            <label for="descripcion">Descripción:</label>
-                            <input type="text" id="descripcion" placeholder="descripcion" required>
+                                <label for="descripcion">Descripción:</label>
+                                <input type="text" id="descripcion" placeholder="descripcion" required>
 
-                            <label for="cantidad">Cantidad en stock:</label>
-                            <input type="number" id="cantidad" placeholder="cantidad" required>
+                                <label for="cantidad">Cantidad en stock:</label>
+                                <input type="number" id="cantidad" placeholder="cantidad" required>
 
-                            <input type="submit" value="Agregar Producto">
-                        </form>
+                                <button id="btnAgregar">Agregar Producto</button>
+                            </form>
+                        </div>
                     </div>
                 </ul>
             </li>
@@ -113,7 +130,7 @@
             </ul>
         </ul>
     </nav>
-    <script src="dom.js"></script>
+    <script src="eventos.js"></script>
     <script src="scriptStock.js"></script>
 </body>
 </html>
