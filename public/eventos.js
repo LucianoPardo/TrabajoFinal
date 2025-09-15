@@ -1,34 +1,53 @@
-const btnCrearEmpleado = document.getElementById("btnCrearEmpleado");
-const formCrearEmpleado = document.getElementById("formCrearEmpleado");
-const btnCrearMenu = document.getElementById("btnCrearMenu");
-const formCrearMenu = document.getElementById("formCrearMenu");
-const btnStock = document.getElementById("btnStock");
-const seccionStock = document.getElementById("seccionStock");
-const btnAñadirProducto = document.getElementById("btnAñadirProducto");
-const formularioStock = document.getElementById("formularioStock");
+document.addEventListener('DOMContentLoaded', () => {
+  const btnCrearEmpleado = document.getElementById("btnCrearEmpleado");
+  const formCrearEmpleado = document.getElementById("formCrearEmpleado");
 
-let abierto = null;
+  const btnCrearMenu = document.getElementById("btnCrearMenu");
+  const formCrearMenu = document.getElementById("formCrearMenu");
 
-function toggle(form) {
-  if (abierto && abierto !== form) abierto.classList.add("oculto");
-  form.classList.toggle("oculto");
-  abierto = form.classList.contains("oculto") ? null : form;
-}
+  const btnStock = document.getElementById("btnStock");
+  const seccionStock = document.getElementById("seccionStock");
 
-btnCrearEmpleado.onclick = () => toggle(formCrearEmpleado);
-btnCrearMenu.onclick = () => toggle(formCrearMenu);
-btnStock.onclick = () => toggle(seccionStock);
-btnAñadirProducto.onclick = () => toggle(formularioStock);
+  const btnAñadirProducto = document.getElementById("btnAñadirProducto");
+  const formularioStock = document.getElementById("formularioStock");
 
-document.addEventListener("click", e => {
-  if (
-    abierto &&
-    !abierto.contains(e.target) &&         // no clic dentro del formulario abierto
-    !e.target.closest("button") &&         // no clic en botones
-    !e.target.closest("#seccionStock")     // 👈 permite todo lo que está dentro de la sección stock
-  ) {
-    abierto.classList.add("oculto");
-    abierto = null;
-  }
+  btnCrearEmpleado.addEventListener('click', (event) =>{
+    event.stopPropagation();
+    formCrearEmpleado.classList.remove('oculto');
+  });
+
+  document.addEventListener('click',(event)=> {
+    if(!formCrearEmpleado.contains(event.target) && event.target!==btnCrearEmpleado){
+      formCrearEmpleado.classList.add('oculto');
+    }
+  });
+
+  btnCrearMenu.addEventListener('click', (event) =>{
+    event.stopPropagation();
+    formCrearMenu.classList.remove('oculto');
+  });
+
+  document.addEventListener('click',(event)=> {
+    if(!formCrearMenu.contains(event.target) && event.target!==btnCrearMenu){
+      formCrearMenu.classList.add('oculto');
+    }
+  });  
+  btnStock.addEventListener('click', (event) =>{
+    event.stopPropagation();
+    seccionStock.classList.remove('oculto');
+  });
+
+  btnAñadirProducto.addEventListener('click',(event)=>{
+    event.stopPropagation();
+    formularioStock.classList.remove('oculto');
+  })
+
+
+  document.addEventListener('click',(event)=> {
+    if(!seccionStock.contains(event.target) && event.target !== btnStock){
+      seccionStock.classList.add('oculto');
+      formularioStock.classList.add('oculto');
+    }
+  });  
 });
 
