@@ -12,11 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnAñadirProducto = document.getElementById("btnAñadirProducto");
   const formularioStock = document.getElementById("formularioStock");
 
+  const btnMapa = document.getElementById("btnMapa");
+  const crearMapa = document.getElementById("crearMapa");
+
+  const btnEdicion = document.getElementById("btnEdicion");
+  const edicionMapa = document.getElementById("edicionMapa");
+
+
   // Agrupamos los botones principales con sus paneles correspondientes
   const panelesPrincipales = [
     { boton: btnCrearEmpleado, panel: formCrearEmpleado },
     { boton: btnCrearMenu, panel: formCrearMenu },
-    { boton: btnStock, panel: seccionStock }
+    { boton: btnStock, panel: seccionStock },
+    { boton: btnMapa, panel: crearMapa }
   ];
 
   // Función para cerrar TODOS los paneles abiertos
@@ -43,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     formularioStock.classList.toggle('oculto');
   });
 
+  btnEdicion.addEventListener('click',(event)=>{
+    event.stopPropagation();
+    edicionMapa.classList.toggle('oculto');
+  }) 
+
   // --- Detector de clics en toda la página (LA PARTE CORREGIDA) ---
   document.addEventListener('click', (event) => {
     // Verificamos si el clic ocurrió DENTRO de alguno de los paneles principales.
@@ -62,4 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
   formCrearEmpleado.addEventListener('click', (event) => event.stopPropagation());
   formCrearMenu.addEventListener('click', (event) => event.stopPropagation());
   seccionStock.addEventListener('click', (event) => event.stopPropagation());
+  crearMapa.addEventListener('click', (event) => event.stopPropagation());
 });
