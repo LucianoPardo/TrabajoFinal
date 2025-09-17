@@ -1,10 +1,23 @@
 
 const escala = 50; 
 let contadorMesas = 1;
+const MAX_MESAS = 100;
 
 function crearPlano() {
     const anchoMetros = parseFloat(document.getElementById("anchoInput").value);
     const largoMetros = parseFloat(document.getElementById("largoInput").value);
+    const min = 3;
+    const max = 50;
+
+    if (!anchoMetros || anchoMetros < min || anchoMetros > max) {
+        alert(`El ancho debe estar entre ${min} y ${max} metros.`);
+        return;
+    }
+
+    if (!largoMetros || largoMetros < min || largoMetros > max) {
+        alert(`El largo debe estar entre ${min} y ${max} metros.`);
+        return;
+    }
 
     if (!anchoMetros || anchoMetros <= 0 || !largoMetros || largoMetros <= 0) {
         alert("Ingresa valores válidos.");
@@ -28,6 +41,12 @@ function crearPlano() {
 }
 
 function agregarMesa() {
+
+    if (contadorMesas > MAX_MESAS) {
+        alert(`No se pueden agregar más de ${MAX_MESAS} mesas en el plano.`);
+        return;
+    }
+
     const plano = document.getElementById("plano");
     const mesa = document.createElement("div");
     mesa.className = "mesa";
@@ -44,6 +63,7 @@ function agregarMesa() {
 }
 
 function guardarPlano() {
+
     const plano = {
         ancho: document.getElementById("plano").style.width,
         largo: document.getElementById("plano").style.height,
