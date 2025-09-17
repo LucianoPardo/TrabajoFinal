@@ -179,3 +179,58 @@ table th {
 .oculto {
     display: none;
 }
+
+
+/*menu*/
+
+/* Estilos para el contenedor de las tarjetas de menú */
+#menuPreviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border-top: 2px solid #eee;
+    margin-top: 20px;
+}
+
+/* Estilos para cada tarjeta de menú individual */
+.menu-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.menu-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #008000; /* Verde */
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    font-size: 0.9em;
+    color: #666;
+}
