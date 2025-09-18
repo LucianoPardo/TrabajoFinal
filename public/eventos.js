@@ -3,24 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('.nav-button');
     const contentSections = document.querySelectorAll('.content-section');
     const formularios = document.querySelectorAll('.cajaFormulario');
-    const iniciarEdicionBtn = document.getElementById("iniciarEdicionBtn");
-    const edicionMapaControles = document.getElementById("edicionMapaControles"); // Nuevo ID
-    
-    // Este botón ahora es para iniciar/alternar los controles de edición
-    if (iniciarEdicionBtn) {
-        iniciarEdicionBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-            edicionMapaControles.classList.toggle('oculto');
-            // También alternar el modo arrastrable de las mesas
-            if (!edicionMapaControles.classList.contains('oculto')) {
-                habilitarArrastreMesas();
-            } else {
-                deshabilitarArrastreMesas();
-            }
-        });
-    }
 
-    // ... el resto de tu código
 
     // Muestra la sección inicial
     const initialSection = document.getElementById('usuarios-content');
@@ -40,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ...código anterior de pruebajs.js...
 
+// ... (código anterior)
+
+// ...código anterior de eventos.js...
+
 navButtons.forEach(button => {
     button.addEventListener('click', () => {
         navButtons.forEach(btn => btn.classList.remove('active'));
@@ -49,17 +36,20 @@ navButtons.forEach(button => {
         formularios.forEach(form => form.classList.add('oculto'));
 
         if (targetId === 'mapa-content') {
-            const planoExiste = window.mapa.cargarPlano();
-        if (planoExiste) {
-            window.mapa.mostrarModoEdicion();
-        } else {
-            window.mapa.mostrarModoCreacion();
+            const planoExiste = localStorage.getItem("planoRestaurante");
+            if (planoExiste) {
+                window.mapa.cargarPlano();
+                window.mapa.mostrarModoVisualizacion();
+            } else {
+                window.mapa.mostrarModoCreacion();
+            }
         }
-}
-
-
     });
 });
+
+// ...el resto de tu código de eventos.js...
+
+// ... (resto del código)
 
     // --- Alternar botones anidados (sin cambios) ---
     const btnCrearEmpleado = document.getElementById("btnCrearEmpleado");

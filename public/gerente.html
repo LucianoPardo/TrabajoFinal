@@ -42,7 +42,7 @@
         
         <main class="content-display">
             <div id="usuarios-content" class="content-section">
-                <button id="btnCrearEmpleado">Crear usuario empleado</button>
+                <button id="btnCrearEmpleado" class="main-button btn-primary">Crear usuario empleado</button>
                 <div class="cajaFormulario oculto" id="formCrearEmpleado">
                     <h1 class="titulo2">Crear empleado</h1>
                     <form class="formulario">
@@ -94,7 +94,7 @@
             </div>
 
             <div id="menu-content" class="content-section oculto">
-                <button id="btnCrearMenu">Crear Menú</button>
+                <button id="btnCrearMenu" class="main-button btn-primary">Crear Menú</button>
                 <div class="cajaFormulario oculto" id="formCrearMenu">
                     <h1 class="titulo2">Crear Menú</h1>
                     <form class="formulario">
@@ -129,7 +129,7 @@
                         <tbody>
                             </tbody>
                     </table>
-                    <button id="btnAñadirProducto">Añadir Producto</button>
+                    <button id="btnAñadirProducto" class="main-button btn-secondary" >Añadir Producto</button>
                     <div class="cajaFormulario oculto" id="formularioStock">
                         <form class="formulario">
                             <label for="nombre">Nombre:</label>
@@ -152,21 +152,23 @@
                         <input type="number" id="anchoInput" min="1" placeholder="10">
                         <label for="largoInput">Largo (m):</label>
                         <input type="number" id="largoInput" min="1" placeholder="15">
-                        <button type="button" id="crearBtn">Crear Plano</button>
+                        <button type="button" id="crearBtn" class="main-button btn-secondary">Crear Plano</button>
                     </div>
-                    <button id="iniciarEdicionBtn" type="button" style="display:none;">✏️ Editar Plano Existente</button>
+                    <button id="iniciarEdicionBtn" type="button" class="main-button btn-secondary" style="display:none;">✏️ Editar Plano Existente</button>
 
                     <div class="oculto" id="edicionMapaControles"> 
-                        <button id="botonMesa" type="button">+ Agregar Mesa</button>
-                        <button id="guardarBtn" type="button">💾 Guardar Plano</button>
-                        <button id="borrarPlanoBtn" type="button">🗑️ Borrar Plano y Crear Nuevo</button>
+                        <button id="botonMesa" type="button" class="main-button btn-primary">+ Agregar Mesa</button>
+                        <button id="guardarBtn" type="button" class="main-button btn-secondary">💾 Guardar Plano</button>
+                        <button id="borrarPlanoBtn" type="button" class="main-button btn-danger">
+                            <i class="fas fa-trash-alt"></i> Borrar Plano
+                        </button>
                     </div>
                     <div id="plano"></div>
                 </div>
             </div>
             
             <div id="reportes-content" class="content-section oculto">
-                <a href="#"><button>Informe de Ventas</button></a>
+                <a href="#"><button class="main-button btn-primary">Informe de Ventas</button></a>
             </div>
         </main>
     </div>
@@ -174,7 +176,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="eventos.js"></script>
-    <script src="mapa3.js"></script>
+    <script src="/mapa3.js"></script>
     <script src="scriptEmpleado.js"></script>
 </body>
 </html>
