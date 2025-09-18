@@ -74,6 +74,12 @@
     color: #5a0000;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
 /* ===== PANEL DEL GERENTE ===== */
 .titulo3{
   display:flex; 

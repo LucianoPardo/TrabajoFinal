@@ -1,7 +1,17 @@
 [
   {
-    "usuario": "gerente1",
-    "contrasenia": "1234",
+    "usuario": "admin",
+    "contrasenia": "admin123",
     "rol": "gerente"
+  },
+  {
+    "usuario": "empleado1",
+    "contrasenia": "emp456",
+    "rol": "empleado"
+  },
+  {
+    "usuario": "Kevin",
+    "contrasenia": "cliente1",
+    "rol": "usuario"
   }
 ]
