@@ -75,16 +75,162 @@
 }
 
 /* ===== PANEL DEL GERENTE ===== */
+.titulo3{
+  display:flex; 
+  justify-content:center;
+}
+
+#bodymapa {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+#medidas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#medidas input {
+  width: 60px;
+  padding: 5px;
+}
+
+
+#plano {
+  margin:20px auto; 
+  position:relative; 
+  background:#f5f5f5; 
+  display:none
+}
+
+
+.mesa {
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: move;
+  border-radius: 8px;
+
+}
+
+
+#botonMesa {
+  margin-top: 10px;
+}
+
+.oculto{
+  display: none;
+}
+
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Estilos del panel de gerente --- */
 body {
+    background-color: #e0c097;
+}
+
+.panel-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #5a0000;
+    color: #f5f5f5;
+    width: 280px;
+    padding: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+.panel-title {
+    font-size: 2.5rem;
+    color: #e0c097;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.sidebar nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: #f5f5f5;
+    padding: 18px 25px;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-button i {
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
+}
+
+.nav-button:hover,
+.nav-button.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-display {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #e0c097;
+    overflow-y: auto;
+}
+
+.content-section {
     background-color: #f5f5f5;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+/* Ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* El resto de tus estilos del código original (formularios, tablas, etc.) */
 
 /* Título del panel */
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #5a0000;
+    color: #fff;
 }
 
 /* Menú lateral */
@@ -123,7 +269,7 @@ nav button:hover, nav a button:hover {
 
 /* Formularios ocultos (cuando se muestren tienen mismo estilo que el login) */
 .cajaFormulario {
-    background-color: rgba(90, 0, 0, 0.9);
+    background-color: rgb(172, 96, 26);
     color: #fff;
     padding: 20px;
     margin-top: 10px;
@@ -174,12 +320,6 @@ table th {
     background-color: #5a0000;
     color: #fff;
 }
-
-/* Ocultar elementos */
-.oculto {
-    display: none;
-}
-
 
 /*menu*/
 
@@ -234,3 +374,6 @@ table th {
     font-size: 0.9em;
     color: #666;
 }
+
+
+
