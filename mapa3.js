@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonMesa = document.getElementById("botonMesa");
     const guardarBtn = document.getElementById("guardarBtn");
     const borrarPlanoBtn = document.getElementById("borrarPlanoBtn");
-
+    
     function habilitarArrastreMesas() {
         if (window.$ && $.ui) {
             $(".mesa").draggable({ containment: "#plano", cursor: "move" });
