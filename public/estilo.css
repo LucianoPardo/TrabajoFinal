@@ -445,6 +445,14 @@ table th {
 
 /* usuario*/
 
+.bodyUsuario {
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .nav-btn{
     display: flex;
     justify-content: center;
@@ -454,9 +462,15 @@ table th {
 }
 
 .nav-btn button{
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
-    background: #5a0000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .menu{
@@ -464,9 +478,15 @@ table th {
 }
 
 .menu section{
-    margin-top: 20px;
+    background-color: rgba(90, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    width: 320px;
+}
+
+.bodyUsuario .flex-contenedor{
+    width: auto;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #a00707;
+
 }
