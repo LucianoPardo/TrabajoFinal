@@ -139,13 +139,6 @@ a {
 
 
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
-}
 
 /* --- Estilos del panel de gerente --- */
 body {
@@ -229,8 +222,6 @@ body {
 .oculto {
     display: none;
 }
-
-/* El resto de tus estilos del código original (formularios, tablas, etc.) */
 
 /* Título del panel */
 h1 {
@@ -450,4 +441,32 @@ table th {
     display: flex; /* Convierte el botón en un contenedor flexible */
     align-items: center; /* Centra verticalmente el ícono y el texto */
     justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+/* usuario*/
+
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    margin-top: 10px;
+    
+}
+
+.nav-btn button{
+    color: #fff;
+    border: 2px solid #fff;
+    background: #5a0000;
+}
+
+.menu{
+    padding: 20px;
+}
+
+.menu section{
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #a00707;
 }
